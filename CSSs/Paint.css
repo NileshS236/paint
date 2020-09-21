@@ -1,0 +1,434 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+*,
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+#paintScreen,
+#draft {
+  border: 1px solid grey;
+  position: absolute;
+  -webkit-box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+#draft {
+  z-index: -1;
+}
+
+.navButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  background: white;
+  left: 92%;
+  top: 1%;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.navButton:hover {
+  cursor: pointer;
+  background: lightgray;
+}
+
+.navButton #nav_button {
+  z-index: 15;
+}
+
+.navbar {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
+  width: 50px;
+  background: white;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  border-radius: 50px;
+  left: 92%;
+  top: 3.5%;
+}
+
+.navbar .buttons {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 200px;
+  width: 50px;
+}
+
+#eraser {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+#pens {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.pencil,
+.sprayCan,
+.highlighter,
+.brush {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 18%;
+}
+
+#eraseall {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+#save {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  width: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+}
+
+.sprayCan,
+.highlighter,
+.brush {
+  opacity: 0;
+}
+
+.sel_sprayCan,
+.sel_pencil,
+.sel_brush,
+.sel_highlighter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dropBox {
+  background: white;
+  display: none;
+  border-radius: 10px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  width: 200px;
+  left: 78.5%;
+  top: 9%;
+  z-index: 1;
+}
+
+.changeVisibility {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.colors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 50%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.colors div {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 3px;
+}
+
+.colors .violet {
+  background: violet;
+}
+
+.colors .green {
+  background: #76ff76;
+}
+
+.colors .blue {
+  background: #5dcff5;
+}
+
+.colors .red {
+  background: #f75858;
+}
+
+.colors .yellow {
+  background: #f8e326;
+}
+
+.eraserCursor {
+  cursor: url(./eraser.svg), auto;
+}
+
+.crosshairCursor {
+  cursor: crosshair;
+}
+
+.user-input {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 250px;
+  z-index: 15;
+  left: 75%;
+  top: 2%;
+}
+
+input {
+  border: 1px solid gray;
+  outline: none;
+  height: 25px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+#color-picker {
+  padding: 0 2px;
+}
+
+.comment {
+  position: absolute;
+  top: 95%;
+  left: 85%;
+  font-family: "Architects Daughter", cursive;
+}
+
+@media screen and (max-width: 1500px) {
+  .user-input {
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .user-input {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .paintScreen {
+    height: 100%;
+    width: 100%;
+  }
+  .navButton {
+    left: 87%;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar {
+    top: 1.5%;
+    left: 87%;
+    width: 40px;
+    height: 230px;
+  }
+  .navbar .buttons {
+    height: 180px;
+    width: 40px;
+  }
+  #eraser {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 45px;
+    width: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  #pens {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .pencil,
+  .sprayCan,
+  .highlighter,
+  .brush {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 45px;
+    width: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 19%;
+  }
+  #eraseall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 45px;
+    width: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  #save {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 45px;
+    width: 45px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  .dropBox {
+    left: 60%;
+    top: 5.5%;
+  }
+  .user-input {
+    left: 55%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .user-input {
+    left: 35%;
+  }
+}
+/*# sourceMappingURL=Paint.css.map */

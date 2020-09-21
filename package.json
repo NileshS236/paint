@@ -1,0 +1,21 @@
+{
+  "name": "paint",
+  "version": "1.0.0",
+  "main": "Paint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.4.2",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "^7.20.0",
+    "gsap": "^3.5.0"
+  },
+  "keywords": [],
+  "description": ""
+}

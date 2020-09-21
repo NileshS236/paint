@@ -1,0 +1,13 @@
+<svg width="163" height="190" viewBox="0 0 163 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="spray-can">
+        <rect id="Rectangle 2" x="120.405" y="17.6083" width="19.1936" height="18.7945"
+            transform="rotate(33.0361 120.405 17.6083)" fill="black" stroke="white" stroke-width="3" />
+        <path id="Ellipse 2"
+            d="M134.637 80.969C124.306 96.8554 102.167 100.96 85.1293 89.8807C68.0919 78.8012 62.8646 56.8999 73.1956 41.0135C83.5266 25.127 105.666 21.0222 122.703 32.1017C139.741 43.1812 144.968 65.0826 134.637 80.969Z"
+            fill="black" stroke="white" stroke-width="3" />
+        <rect id="Rectangle 1" x="80.8392" y="26.7153" width="75.6022" height="143.023" rx="13.5"
+            transform="rotate(33.0361 80.8392 26.7153)" fill="black" stroke="white" stroke-width="3" />
+        <ellipse id="Ellipse 1" cx="79.9903" cy="98.2072" rx="23.1183" ry="21.7945"
+            transform="rotate(33.0361 79.9903 98.2072)" fill="#EEEEEE" />
+    </g>
+</svg>

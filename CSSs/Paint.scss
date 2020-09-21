@@ -1,0 +1,388 @@
+@import url("https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap");
+
+@mixin Center {
+  display: flex;
+  justify-content: center;
+  height: 45px;
+  width: 45px;
+  align-items: center;
+  border-radius: 50%;
+}
+
+@mixin selCenter {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -webkit-user-drag: none;
+}
+
+#paintScreen,
+#draft {
+  border: 1px solid grey;
+  position: absolute;
+}
+
+#draft {
+  z-index: -1;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  opacity: 1;
+  background: white;
+  left: 92%;
+  top: 1%;
+  border-radius: 50%;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  &:hover {
+    cursor: pointer;
+    background: lightgray;
+  }
+  #nav_button {
+    z-index: 15;
+  }
+}
+
+.navbar {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 250px;
+  width: 50px;
+  background: white;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 5;
+  border-radius: 50px;
+  left: 92%;
+  top: 3.5%;
+  .buttons {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    height: 200px;
+    width: 50px;
+  }
+}
+
+#eraser {
+  @include Center();
+}
+
+#pens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pencil,
+.sprayCan,
+.highlighter,
+.brush {
+  @include Center();
+  position: absolute;
+  top: 18%;
+}
+
+#eraseall {
+  @include Center();
+}
+
+#save {
+  @include Center();
+}
+
+.sprayCan,
+.highlighter,
+.brush {
+  opacity: 0;
+}
+
+.sel_sprayCan,
+.sel_pencil,
+.sel_brush,
+.sel_highlighter {
+  @include selCenter();
+}
+
+.dropBox {
+  background: white;
+  display: none;
+  border-radius: 10px;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  position: absolute;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  height: 100px;
+  width: 200px;
+  left: 78.5%;
+  top: 9%;
+  z-index: 1;
+}
+
+.changeVisibility {
+  display: flex;
+}
+
+.colors {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  justify-content: flex-end;
+  div {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+    margin: 3px;
+  }
+  .violet {
+    background: rgb(238, 130, 238);
+  }
+  .green {
+    background: rgb(118, 255, 118);
+  }
+  .blue {
+    background: rgb(93, 207, 245);
+  }
+  .red {
+    background: rgb(247, 88, 88);
+  }
+  .yellow {
+    background: rgb(248, 227, 38);
+  }
+}
+
+.eraserCursor {
+  cursor: url(./eraser.svg), auto;
+}
+
+.crosshairCursor {
+  cursor: crosshair;
+}
+
+.user-input {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 250px;
+  z-index: 15;
+  left: 75%;
+  top: 2%;
+}
+
+input {
+  border: 1px solid gray;
+  outline: none;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+#color-picker {
+  padding: 0 2px;
+}
+
+// #stroke-width {
+//   -webkit-appearance: none;
+//   position: relative;
+//   height: 10px;
+//   top: 7px;
+//   background: rgb(80, 80, 235);
+// }
+
+// #stroke-width::-webkit-slider-thumb {
+//   -webkit-appearance: none;
+//   appearance: none;
+//   width: 10px;
+//   height: 20px;
+//   background: rgb(255, 251, 236);
+// }
+
+.comment {
+  position: absolute;
+  font-family: "Architects Daughter", cursive;
+}
+
+#image-name {
+  position: absolute;
+  display: flex;
+  height: 150px;
+  width: 350px;
+  flex-direction: column;
+  border: 1px solid black;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  top: -15%;
+  background-color: aliceblue;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.disable {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 15;
+}
+
+#input-name p {
+  position: absolute;
+  top: 60px;
+  left: 31.5px;
+  cursor: text;
+  font-family: sans-serif;
+  font-size: 15px;
+  color: red;
+}
+
+.reqmsg {
+  display: none;
+}
+
+.required {
+  animation: require 0.5s ease forwards;
+}
+
+.name {
+  border: none;
+  border-bottom: 1px solid black;
+  border-radius: none;
+  background-color: aliceblue;
+}
+
+#submit {
+  height: 35px;
+  width: 50px;
+  background: rgb(152, 152, 247);
+  border: none;
+  outline: none;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-left: 270px;
+  &:hover {
+    background: rgb(123, 123, 216);
+  }
+}
+
+@keyframes require {
+  0% {
+    top: 60px;
+    font-size: 15px;
+  }
+  100% {
+    top: 85px;
+    font-size: small;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .user-input {
+    left: 70%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .user-input {
+    left: 65%;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .paintScreen {
+    height: 100%;
+    width: 100%;
+  }
+  .navButton {
+    left: 87%;
+    width: 40px;
+    height: 40px;
+  }
+  .navbar {
+    top: 1.5%;
+    left: 87%;
+    width: 40px;
+    height: 230px;
+    .buttons {
+      height: 180px;
+      width: 40px;
+    }
+  }
+  #eraser {
+    @include Center();
+    height: 40px;
+    width: 40px;
+  }
+
+  #pens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .pencil,
+  .sprayCan,
+  .highlighter,
+  .brush {
+    @include Center();
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 19%;
+  }
+
+  #eraseall {
+    @include Center();
+    height: 40px;
+    width: 40px;
+  }
+
+  #save {
+    @include Center();
+    height: 40px;
+    width: 40px;
+  }
+  .dropBox {
+    left: 60%;
+    top: 5.5%;
+  }
+
+  .user-input {
+    left: 55%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .user-input {
+    left: 35%;
+  }
+}

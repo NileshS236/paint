@@ -1,0 +1,21 @@
+<svg width="145" height="124" viewBox="0 0 145 124" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="eraser_tool">
+<g id="Polygon 1" filter="url(#filter0_d)">
+<path d="M110.341 72.3661L88.8443 95.621L50.1301 96.3253L36.9483 84.1403C32.8927 80.3914 32.6441 74.0647 36.393 70.0091L56.9498 47.7705L92.5714 9.23482C96.3203 5.17925 102.647 4.93062 106.703 8.67951L133.066 33.0494C137.122 36.7983 137.37 43.1251 133.622 47.1807L110.341 72.3661Z" fill="black"/>
+<path d="M57.6842 48.4493L93.3057 9.91362C96.6797 6.2636 102.374 6.03984 106.024 9.41383L132.387 33.7838C136.037 37.1578 136.261 42.8519 132.887 46.5019L109.606 71.6873L88.3996 94.6289L50.5137 95.3181L37.6271 83.406C33.977 80.032 33.7533 74.3379 37.1273 70.6879L57.6842 48.4493Z" stroke="white" stroke-width="2"/>
+</g>
+<rect id="Rectangle 1" y="93" width="45" height="4" fill="black"/>
+<path id="Rectangle 2" d="M105.088 75.0915L105.458 75.4284L105.795 75.0589L133.419 44.7622C137.326 40.477 137.02 33.8358 132.735 29.9287L109.088 8.36818C104.803 4.46102 98.1621 4.76743 94.2549 9.05257L66.6305 39.3493L66.2936 39.7188L66.6631 40.0557L105.088 75.0915Z" fill="#C4C4C4" stroke="white"/>
+</g>
+<defs>
+<filter id="filter0_d" x="25.605" y="1.89154" width="118.804" height="121.407" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>

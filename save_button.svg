@@ -1,0 +1,17 @@
+<svg width="30" height="35" viewBox="0 0 156 176" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="save_button">
+        <g id="save-button">
+            <g id="Group 4">
+                <g id="Group 3">
+                    <g id="Group 2">
+                        <rect id="Rectangle 1" x="62" y="9" width="32" height="80" fill="black" />
+                        <rect id="Rectangle 2" x="62" width="32" height="5" fill="black" />
+                        <path id="Polygon 1" d="M78.3013 154.301L37.5981 83.8013L119.004 83.8013L78.3013 154.301Z"
+                            fill="black" stroke="white" stroke-width="3" />
+                    </g>
+                </g>
+            </g>
+        </g>
+        <rect id="Rectangle 3" y="152" width="156" height="5" fill="black" />
+    </g>
+</svg>
